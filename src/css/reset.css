@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.show {
+  height:40vh;
+  background-color: #fff;
+}
+.wrap {
+  height:60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F1CACD;
+}
+.doraemon {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 310px;
+}
+.speed {
+  float: right;
+}
+.speed button {
+  display: block;
+  width: 40px;
+  height: 30px;
+  margin: 30px;
+  border: 3px solid #F1CACD;
+  background-color: #fff;
+  border-radius: 5px;
+  outline: 0;
+}
+.speed button:hover {
+  background-color: #F1CACD;
+  color: #fff;
+}

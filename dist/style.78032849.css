@@ -1,22 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.doraemon {
-  width: 200px;
-  /* background-color: red; */
-  margin-left: auto;
-  margin-right: auto;
-  height: 600px;
-}
+/* 你好呀！我是一名前端的小白,学习了css3动画和JavaScript，
+我就用这两样给你绘制一个可爱的哆啦A梦吧 ！！*/
+/* 首先我们绘制哆啦A梦的头 */
 .head {
   position: relative;
-  width: 100%;
+  width: 200px;
   height: 190px;
   background-color: #30a7da;
   border-radius: 50%;
 }
+/* 然后绘制他的脸 */
 .face {
   position: absolute;
   width: 90%;
@@ -28,6 +20,7 @@
   border-radius: 50%;
 }
 
+/* 绘制他的两个小眼睛 */
 .eye1,
 .eye2 {
   position: absolute;
@@ -42,6 +35,8 @@
 .eye2 {
   left: 48%;
 }
+
+/* 要记得给眼睛添加两颗炯炯有神的眼珠子 */
 .eye1::before,
 .eye2::before {
   content: '';
@@ -51,10 +46,11 @@
   height: 4px;
   border: 3px solid #000;
   border-radius: 50%;
-  left: 45%;
-  bottom: 20%;
+  left: 42%;
+  bottom: 23%;
 }
 
+/* 画上他的红鼻子 */
 .nose {
   position: absolute;
   width: 20px;
@@ -66,17 +62,7 @@
   border-radius: 50%;
   border: 1px solid #000;
 }
-.nose::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: .5px;
-  height: 50px;
-  background-color: #000;
-  left: 50%;
-  top:100%;
-}
-
+/* 给他的鼻子来点高光，增加立体感 */
 .nose::after {
   content: '';
   display: block;
@@ -88,6 +74,20 @@
   border-radius: 50%;
   background-color: #fff;
 }
+/* 发现鼻子下方有一条线，也给他加上 */
+.nose::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: .5px;
+  height: 50px;
+  background-color: #000;
+  left: 50%;
+  top:100%;
+}
+
+/* 现在来绘制胡子了，
+先绘制左边的胡子 */
 .mustacheLeft > div{
   position: absolute;
   width: 45px;
@@ -95,19 +95,23 @@
   left: 10px;
   background-color: #000;
 }
-
+/* 第一根胡子 */
 .m1 {
 	top: 14%;
 	transform: rotate(15deg);
 }
+/* 第二根胡子 */
 .m2 {
 	top: 25%;
 	transform: rotate(2deg);
 }
+/* 第三根胡子 */
 .m3 {
 	top: 35%;
 	transform: rotate(-15deg);
 }
+
+/* 轮到右边的胡子了 */
 .mustacheRight > div{
   position: absolute;
   width: 45px;
@@ -115,18 +119,23 @@
   right: 10px;
   background-color: #000;
 }
+/* 右边的第一根胡子 */
 .m4 {
 	top: 14%;
 	transform: rotate(-15deg);
 }
+/* 右边的第二根胡子 */
 .m5 {
 	top: 25%;
 	transform: rotate(-2deg);
 }
+/* 右边的第三根胡子 */
 .m6 {
 	top: 35%;
 	transform: rotate(15deg);
 }
+
+/* 来绘制嘴巴 */
 .month {
   position: absolute;
   width: 130px;
@@ -139,7 +148,7 @@
   overflow: hidden;
   z-index: 3;
 }
-
+/* 这是舌头阴影哦 */
 .tou1 {
   position: relative;
   width: 40px;
@@ -151,11 +160,11 @@
   border-radius: 30px;
   border: 1px solid transparent;
 }
-
+/* 这是真的舌头 */
 .tou2 {
   left: 50%;
   bottom: 45%;
-  transform: rotate(45deg);
+  transform: rotate(51deg);
   position: relative;
   width: 42px;
   height: 45px;
@@ -163,7 +172,7 @@
   border: 1px solid transparent;
   background-color: #971112;
 }
-
+/* 舌头的爱心形状就是这么来的呢 */
 .tou1::before {
   content: '';
   display: block;
@@ -186,6 +195,7 @@
   margin: 10% auto;
 }
 
+/* 绘制身体 */
 .body {
   position: relative;
   width: 115px;
@@ -194,7 +204,7 @@
   margin: -15px auto;
   
 }
-
+/* 绘制肚皮，最开始看错了，看成口袋了呜呜，后面才发现是肚皮 */
 .pocket {
   position: absolute;
   width: 90px;
@@ -206,6 +216,7 @@
   transform: translate(-50%);
   z-index: 10;
 }
+/* 绘制万能的口袋 */
 .pocket::before {
   content: '';
   position: absolute;
@@ -218,7 +229,7 @@
   transform: translate(-50%);
   border-radius: 0 0 30px 30px;
 }
-
+/* 小铃铛的红线 */
 .bellLine {
   width: 110px;
   height: 7px;
@@ -226,7 +237,7 @@
   border-radius: 5px;
   margin: auto;
 }
-
+/* 小铃铛 */
 .bell {
   position: absolute;
   border-radius: 50%;
@@ -238,7 +249,7 @@
   transform: translate(-50%);
   z-index: 11;
 }
-
+/* 小铃铛上的缝隙 */
 .bell::before {
   content: '';
   display: block;
@@ -250,7 +261,7 @@
   left: 30%;
   top: 30%;
 }
-
+/* 小铃铛上的黑洞 */
 .bell::after {
   content: '';
   position: absolute;
@@ -262,7 +273,7 @@
   bottom: 0;
 }
 
-
+/* 右边的手臂 */
 .armR {
   position: absolute;
   height: 25px;
@@ -272,9 +283,9 @@
   top: -8%;
   left: 78%;
   border-bottom-right-radius: 50%;
-  z-index: -1;
+  /* z-index: -1; */
 }
-
+/* 他的小手 */
 .armR .hand {
   position: absolute;
   width: 30px;
@@ -285,19 +296,18 @@
   left: 85%;
   top: -25%;
 }
-
+/* 左边的手臂 */
 .armL {
-  z-index: -1;
   position: absolute;
   height: 25px;
-  width: 80px;
+  width: 75px;
   background-color: #30a7da;
   transform: rotate(-30deg);
   top: 25%;
   right: 85%;
   border-top-left-radius: 50%;
 }
-
+/* 他的左手 */
 .armL .hand {
   position: absolute;
   width: 30px;
@@ -308,13 +318,14 @@
   left: -5%;
 }
 
+/* 终于到腿了 */
 #footer {
   position: relative;
   width: 115px;
   height: 50px;
   margin: auto;
 }
-
+/* 他的大长腿 */
 .legL,
 .legR {
   float: left;
@@ -327,6 +338,7 @@
   float: right;
 }
 
+/* 小裤裆 */
 .legL::after {
   content: '';
   display: block;
@@ -347,7 +359,7 @@
   transform: rotate(-30deg) translate(-40%);
   z-index: -1;
 }
-
+/* 他的左右脚 */
 .footL,
 .footR {
   position: absolute;
@@ -362,3 +374,6 @@
 .footR {
   left: 55%;
 }
+/* 你喜欢这个哆啦A梦吗，送给你，嘻嘻 */
+
+/*# sourceMappingURL=/style.78032849.css.map */
