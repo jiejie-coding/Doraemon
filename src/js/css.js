@@ -1,4 +1,5 @@
-
+const string = `
+<style>
 /* 你好呀！我是一名前端的小白,学习了css3动画和JavaScript，
 我就用这两样给你绘制一个可爱的哆啦A梦吧 ！！*/
 /* 首先我们绘制哆啦A梦的头 */
@@ -316,6 +317,7 @@
   transform: translate(-50%);
   border-radius: 0 0 30px 30px;
 }
+
 /* 右边的手臂 */
 .armR {
   position: absolute;
@@ -429,3 +431,6 @@
   left: 55%;
 }
 /* 你喜欢这个哆啦A梦吗，送给你，嘻嘻 */
+</style>`
+
+export default string;
