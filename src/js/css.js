@@ -1,8 +1,11 @@
 const string = `
 <style>
+
 /* 你好呀！我是一名前端的小白,学习了css3动画和JavaScript，
 我就用这两样给你绘制一个可爱的哆啦A梦吧 ！！*/
+
 /* 首先我们绘制哆啦A梦的头 */
+
 .head {
   position: relative;
   width: 200px;
@@ -10,7 +13,9 @@ const string = `
   background-color: #30a7da;
   border-radius: 50%;
 }
+
 /* 然后绘制他的脸 */
+
 .face {
   position: absolute;
   width: 90%;
@@ -23,6 +28,7 @@ const string = `
 }
 
 /* 绘制他的两个小眼睛 */
+
 .eye1,
 .eye2 {
   position: absolute;
@@ -38,7 +44,8 @@ const string = `
   left: 48%;
 }
 
-/* 要记得给眼睛添加两颗炯炯有神的眼珠子 */
+/* 给眼睛添加两颗炯炯有神的眼珠子 */
+
 .eye1::before,
 .eye2::before {
   content: '';
@@ -53,6 +60,7 @@ const string = `
 }
 
 /* 画上他的红鼻子 */
+
 .nose {
   position: absolute;
   width: 20px;
@@ -64,11 +72,17 @@ const string = `
   border-radius: 50%;
   border: 1px solid #000;
 }
+
 /* 给他的鼻子来点高光，增加立体感 */
-.nose::after {
+
+.nose::after,
+.nose::before {
   content: '';
   display: block;
-  position: absolute;
+  position: absolute; 
+}
+
+.nose::after {
   top: 2px;
   left: 2px;
   width: 8px;
@@ -76,12 +90,11 @@ const string = `
   border-radius: 50%;
   background-color: #fff;
 }
+
 /* 发现鼻子下方有一条线，也给他加上 */
+
 .nose::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 1px;
+  width: .5px;
   height: 50px;
   background-color: #000;
   left: 50%;
@@ -90,6 +103,7 @@ const string = `
 
 /* 现在来绘制胡子了，
 先绘制左边的胡子 */
+
 .mustacheLeft > div{
   position: absolute;
   width: 45px;
@@ -98,23 +112,30 @@ const string = `
   background-color: #000;
   z-index: 1;
 }
+
 /* 第一根胡子 */
+
 .m1 {
 	top: 14%;
 	transform: rotate(15deg);
 }
+
 /* 第二根胡子 */
+
 .m2 {
 	top: 25%;
 	transform: rotate(2deg);
 }
+
 /* 第三根胡子 */
+
 .m3 {
 	top: 35%;
 	transform: rotate(-15deg);
 }
 
 /* 轮到右边的胡子了 */
+
 .mustacheRight > div{
   position: absolute;
   width: 45px;
@@ -122,23 +143,30 @@ const string = `
   right: 10px;
   background-color: #000;
 }
+
 /* 右边的第一根胡子 */
+
 .m4 {
 	top: 14%;
 	transform: rotate(-15deg);
 }
+
 /* 右边的第二根胡子 */
+
 .m5 {
 	top: 25%;
 	transform: rotate(-2deg);
 }
+
 /* 右边的第三根胡子 */
+
 .m6 {
 	top: 35%;
 	transform: rotate(15deg);
 }
 
 /* 来绘制嘴巴 */
+
 .month {
   position: absolute;
   width: 130px;
@@ -151,43 +179,37 @@ const string = `
   overflow: hidden;
   z-index: 3;
 }
-/* 这是舌头阴影哦 */
-.tou1 {
+
+/* 这是舌头阴影 */
+
+.tou1,
+.tou2 {
   position: relative;
+  background-color: #971112;
+  border-radius: 30px;
+}
+
+.tou1 {
   width: 40px;
   height: 50px;
-  background-color: #971112;
   top: 40%;
   left: 25%;
   transform: rotate(-45deg);
-  border-radius: 30px;
   border: 1px solid transparent;
 }
-/* 这是真的舌头 */
+
 .tou2 {
+  width: 42px;
+  height: 45px;
   left: 50%;
   bottom: 45%;
   transform: rotate(51deg);
-  position: relative;
-  width: 42px;
-  height: 45px;
-  border-radius: 30px;  
   border: 1px solid transparent;
-  background-color: #971112;
-}
-/* 舌头的爱心形状就是这么来的呢 */
-.tou1::before {
-  content: '';
-  display: block;
-  position: relative;
-  width: 90%;
-  height: 180%;
-  background-color: #DB301F;
-  border-radius: 30px;
-  margin: 10% auto;
-  z-index: 9999;
 }
 
+/* 舌头的爱心形状就是这么来的呢 */
+
+.tou1::before,
 .tou2::before {
   content: '';
   display: block;
@@ -197,34 +219,30 @@ const string = `
   border-radius: 30px;
   margin: 10% auto;
 }
-
-
-.face::after {
-  content:'';
-  position: absolute;
-  width: 40px;
-  height: 20px;
-  top: 40px;
-  left: 25px;
-  display:block;
-  background-color: rgba(255,0,0,.4);;
-  box-shadow: 0px 0px 10px 10px rgba(255,0,0,.4);
-  border-radius: 50%;
-  animation: 1s face-be-red alternate infinite;
+.tou1::before {
+  position: relative;
 }
 
+/* 害羞 */
+
+.face::after,
 .face::before {
   content:'';
   position: absolute;
   width: 40px;
   height: 20px;
   top: 40px;
-  right: 25px;
   display:block;
-  background-color:  rgba(255,0,0,.4);
+  background-color: rgba(255,0,0,.4);;
   box-shadow: 0px 0px 10px 10px rgba(255,0,0,.4);
   border-radius: 50%;
   animation: 1s face-be-red alternate infinite;
+}
+.face::after {
+  left: 25px;
+}
+.face::before {
+  right: 25px;
 }
 
 
@@ -269,10 +287,13 @@ const string = `
   z-index: 11;
 }
 /* 小铃铛上的缝隙 */
-.bell::before {
+.bell::before,
+.bell::after {
   content: '';
   display: block;
   position: absolute;
+}
+.bell::before {
   width: 10px;
   height: 10px;
   background-color: #5F3800;
@@ -282,9 +303,6 @@ const string = `
 }
 /* 小铃铛上的黑洞 */
 .bell::after {
-  content: '';
-  position: absolute;
-  display: block;
   width: 0px;
   height: 6px;
   border: 1px solid #000;
@@ -317,19 +335,30 @@ const string = `
   transform: translate(-50%);
   border-radius: 0 0 30px 30px;
 }
-
 /* 右边的手臂 */
-.armR {
+.armR,
+.armL {
   position: absolute;
   height: 25px;
-  width: 80px;
   background-color: #30a7da;
+}
+.armR {
+  width: 80px;
   top: 23%;
   left: 78%;
   border-bottom-right-radius: 50%;
   transform-origin: 0px 15px;
   animation: .2s wave-armR alternate infinite;
 }
+/* 左边的手臂 */
+.armL {
+  width: 75px;
+  transform: rotate(-30deg);
+  top: 25%;
+  right: 85%;
+  border-top-left-radius: 50%;
+}
+
 
 @keyframes wave-armR {
   0% {
@@ -340,37 +369,23 @@ const string = `
   }
 }
 /* 他的小手 */
-.armR .hand {
-  position: absolute;
+.armR .hand,
+.armL .hand {
+   position: absolute;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background-color: #fff;
   border: 1px solid #000;
+}
+
+.armR .hand {
   left: 85%;
   top: -25%;
 }
-/* 左边的手臂 */
-.armL {
-  position: absolute;
-  height: 25px;
-  width: 75px;
-  background-color: #30a7da;
-  transform: rotate(-30deg);
-  top: 25%;
-  right: 85%;
-  border-top-left-radius: 50%;
-}
-
 
 /* 他的左手 */
 .armL .hand {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #fff;
-  border: 1px solid #000;
   left: -5%;
 }
 
@@ -395,23 +410,22 @@ const string = `
 }
 
 /* 小裤裆 */
-.legL::after {
+.legL::after,
+.legR::after {
   content: '';
   display: block;
   width: 25px;
   height: 50px;  
   background-color: #30a7da;
+  
+}
+.legL::after {
   margin-left: 80%;
   transform: rotate(30deg);
   z-index: -1;
 }
 
 .legR::after {
-  content: '';
-  display: block;
-  width: 25px;
-  height: 50px;
-  background-color: #30a7da;
   transform: rotate(-30deg) translate(-40%);
   z-index: -1;
 }

@@ -1,6 +1,6 @@
 import string from './css.js'
 let n = 0;
-let t = 0;
+let t = 10;
 let demo = document.querySelector('.demo');
 let demo2 = document.querySelector('.demo2');
 let show = document.querySelector('.show');
