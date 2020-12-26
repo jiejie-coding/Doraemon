@@ -81,7 +81,7 @@ const string = `
   content: "";
   display: block;
   position: absolute;
-  width: .5px;
+  width: 1px;
   height: 50px;
   background-color: #000;
   left: 50%;
