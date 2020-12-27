@@ -94,11 +94,11 @@ const string = `
 /* 发现鼻子下方有一条线，也给他加上 */
 
 .nose::before {
+  left: 50%;
+  top:100%;
   width: .5px;
   height: 50px;
   background-color: #000;
-  left: 50%;
-  top:100%;
 }
 
 /* 现在来绘制胡子了，
